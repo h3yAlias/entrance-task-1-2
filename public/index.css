@@ -1,6 +1,7 @@
 html,
 body,
 #map {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -19,7 +20,10 @@ body,
   font-size: 1.3em;
   font-weight: bold;
 }
-
+/* .details-coordinates {
+  font-size: 0.7em;
+  padding-bottom: 0.6em;
+} */
 .details-state {
   font-size: 0.8em;
   color: white;

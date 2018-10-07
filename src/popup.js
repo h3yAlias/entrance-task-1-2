@@ -10,8 +10,8 @@ function getTableRowHtml(obj) {
 export function getPopupContent(obj) {
 
     const htmlStatus = obj.isActive
-        ? `<div class="station-info-active">active</div>`
-        : `<div class="station-info-defective">defective</div>`
+        ? `<div class="station-info-active">Active</div>`
+        : `<div class="station-info-defective">Defective</div>`
 
     let content = `
         <div class="station-info">
@@ -22,7 +22,7 @@ export function getPopupContent(obj) {
         </div>
     `;
 
-    if (obj.isActive) {
+    if (obj.isActive && obj.drones) {
         const htmlRows = obj.drones.map(getTableRowHtml).join('\n');
 
         const htmlTable = `
